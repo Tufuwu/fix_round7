@@ -23,6 +23,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -37,6 +38,7 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
+.nox/
 .coverage
 .coverage.*
 .cache
@@ -44,14 +46,11 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
+.pytest_cache/
 
 # Translations
 *.mo
 *.pot
-
-# Django stuff:
-*.log
-local_settings.py
 
 # Flask stuff:
 instance/
@@ -69,6 +68,10 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# IPython
+profile_default/
+ipython_config.py
+
 # pyenv
 .python-version
 
@@ -84,7 +87,8 @@ celerybeat-schedule
 env/
 venv/
 ENV/
-setup.bat
+env.bak/
+venv.bak/
 
 # Spyder project settings
 .spyderproject
@@ -98,9 +102,36 @@ setup.bat
 
 # mypy
 .mypy_cache/
+.dmypy.json
+dmypy.json
 
-# pylint
-.pylint.d/
+# Pyre type checker
+.pyre/
 
-# IDE files
-.idea/
+# Django
+*.pyc
+*~
+__pycache__
+myvenv
+/static
+.DS_Store
+*.log
+local_settings.py
+*.sqlite3
+
+# Squire-specific gitignore (Secret Keys, etc.)
+/squire/secret_key.txt
+htdocs/media/local_only/*
+htdocs/media/images/*
+/output/
+/test/output/
+
+# Visual Studio Code
+.vscode
+
+# IntelliJ
+/.idea/
+Squire.iml
+
+# coverage.py files
+/coverage
